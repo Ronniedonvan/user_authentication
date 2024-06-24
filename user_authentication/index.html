@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- Sign Up Form -->
+        <form id="signup-form" class="form">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" name="username" placeholder="Username" required>
+            <input type="email" id="signup-email" name="email" placeholder="Email" required>
+            <input type="password" id="signup-password" name="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+            <p id="signup-message"></p>
+            <p><a href="#" onclick="showForm('signin-form')">Already have an account? Sign In</a></p>
+        </form>
+
+        <!-- Sign In Form -->
+        <form id="signin-form" class="form hidden">
+            <h2>Sign In</h2>
+            <input type="email" id="signin-email" name="email" placeholder="Email" required>
+            <input type="password" id="signin-password" name="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+            <p id="signin-message"></p>
+            <p><a href="#" onclick="showForm('signup-form')">Don't have an account? Sign Up</a></p>
+            <p><a href="#" onclick="showForm('forgot-password-form')">Forgot Password?</a></p>
+        </form>
+
+        <!-- Forgot Password Form -->
+        <form id="forgot-password-form" class="form hidden">
+            <h2>Forgot Password</h2>
+            <input type="email" id="forgot-password-email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Reset Password</button>
+            <p id="forgot-password-message"></p>
+            <p><a href="#" onclick="showForm('signin-form')">Remembered your password? Sign In</a></p>
+        </form>
+
+        <!-- Profile Form -->
+        <form id="profile-form" class="form hidden">
+            <h2>Profile</h2>
+            <input type="text" id="profile-mobile" name="mobile" placeholder="Mobile Phone Number" required>
+            <input type="email" id="profile-email" name="email" placeholder="Email" required>
+            <input type="text" id="profile-address" name="address" placeholder="Address" required>
+            <input type="text" id="profile-reg-number" name="reg_number" placeholder="Registration Number" required>
+            <button type="submit">Update Profile</button>
+            <p id="profile-message"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
